@@ -5,7 +5,7 @@
     hostname: "abcd"
     aws_instance_type: "t2.micro"
     aws_service: "new-service"
-- mame: set facts
+- name: set facts
   set_fact:
     archive_path: "aaa"
     extracted_files: "bbb"
