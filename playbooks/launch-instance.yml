@@ -13,4 +13,4 @@
           - aws_service is defined
         msg: "USAGE: ansible-playbook -i inventories/<envname> playbooks/scale-up.yml -e 'rb_service=<service> rb_instance_type=<aws instance type> rb_instance_num=<number of instances>'"
     - name: create instances
-        msg: "Now is the real thing"
+      msg: "Now is the real thing"
