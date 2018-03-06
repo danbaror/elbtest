@@ -1,0 +1,15 @@
+---
+# tasks file for jdk install
+- name: Copy oracle java8 rpm to server
+  copy:
+    src: "/tmp/jdk-{{ jdk_file_version }}-linux-x64.rpm"
+    dest: "/tmp/jdk-{{ jdk_file_version }}-linux-x64.rpm"
+- name: yum install jdk rpm
+  yum:
+    name: "/tmp/jdk-{{ jdk_file_version }}-linux-x64.rpm"
+    state: present 
+  become: yes
+- name: remove installation file 
+  file:
+   path: "/tmp/jdk-{{ jdk_file_version }}-linux-x64.rpm"
+   state: absent 

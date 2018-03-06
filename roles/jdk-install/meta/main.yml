@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Koji Tanaka
+  description: Installs Oracle JDK
+  company: RDI2
+  license: MIT license
+  min_ansible_version: 1.9
+  platforms:
+  - name: CentOS
+    versions:
+    - 6.7
+  categories:
+  - packaging
+  - system
+dependencies: []

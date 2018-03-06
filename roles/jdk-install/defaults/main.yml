@@ -1,0 +1,7 @@
+---
+# defaults file for jdk
+
+jdk_major_version: 8
+jdk_minor_version: 121
+jdk_version_suffix: b13
+jdk_file_version: "{{ jdk_major_version }}u{{ jdk_minor_version }}"

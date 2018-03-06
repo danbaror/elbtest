@@ -1,0 +1,8 @@
+---
+# defaults file for get-file-from-s3
+aternity_build_id: "{{ lookup('env', 'ATERNITY_BUILD_ID') }}"
+aternity_defect_id: "{{ lookup('env', 'ATERNITY_DEFECT_ID') }}"
+path_to_file: "{{ file_basename }}_{{ aternity_build_id }}{% if aternity_defect_id != '' %}_{{ aternity_defect_id }}{% endif %}.{{ file_ext }}"
+current_path_to_file: "{{ lookup('env','HOME') }}/{{ aternity_build_id }}/{{ path_to_file }}"
+aternity_version: "{{ aternity_build_id.split('.')[0] }}.{{ aternity_build_id.split('.')[1] }}"
+aternity_release: "Release_{{ aternity_build_id.split('.')[2] }}"

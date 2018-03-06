@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+- name: set variables
+  vars:
+    hostname: "abcd"
+    aws_instance_type: "t2.micro"
+    aws_service: "new-service"

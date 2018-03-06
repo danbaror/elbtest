@@ -1,0 +1,9 @@
+---
+# tasks file for jdk
+- name: remove the java packages
+  yum:
+    name: java*
+    state: absent
+  become: yes
+
+- include: install.yml
