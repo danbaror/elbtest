@@ -1,6 +1,14 @@
 ---
+- hosts: localhost
 - name: set variables
   vars:
     hostname: "abcd"
     aws_instance_type: "t2.micro"
     aws_service: "new-service"
+- mame: set facts
+  set_fact:
+    archive_path: "aaa"
+    extracted_files: "bbb"
+- name: set fact timestamp
+  set_fact:
+    current_timestamp: "{{ lookup('pipe', 'date +%Y-%m-%d-%H%M%S') }}"
